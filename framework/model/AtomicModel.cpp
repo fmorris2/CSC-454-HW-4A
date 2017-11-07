@@ -3,3 +3,7 @@
 //
 
 #include "AtomicModel.h"
+
+int AtomicModel::init_internal_ticks() {
+    return 1;
+}

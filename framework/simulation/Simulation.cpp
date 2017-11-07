@@ -16,10 +16,12 @@ void Simulation::run() {
     while(model->is_running) {
         cout << "[Simulation] Executing tick #" << tick << endl;
         vector<string> output = model->tick();
-        cout << model->get_model_name() << " output at simulation tick #" << tick << ": " << endl;
+        cout << "[Simulation] " << model->get_model_name() << " output at simulation tick #" << tick << ": " << endl;
         for(string token : output) {
             cout << "\t" << token << endl;
         }
+
+        tick++;
     }
 }
 
